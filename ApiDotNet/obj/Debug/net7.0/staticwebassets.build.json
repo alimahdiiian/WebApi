@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "VtUxaGNW50FiGSY/12aoyLLN73rNT6GKZVx4tk9jvgA=",
+  "Hash": "O0PQdbpy8RyY2PPqYUwvYOG017Ke6uqvh62doRZxaHU=",
   "Source": "ApiDotNet",
   "BasePath": "_content/ApiDotNet",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "ApiDotNet\\wwwroot",
+      "Source": "ApiDotNet",
+      "ContentRoot": "C:\\Users\\SCHAHRAD\\source\\repos\\ApiDotNet\\ApiDotNet\\wwwroot\\",
+      "BasePath": "_content/ApiDotNet",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\SCHAHRAD\\source\\repos\\ApiDotNet\\ApiDotNet\\wwwroot\\file.rar",
+      "SourceId": "ApiDotNet",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SCHAHRAD\\source\\repos\\ApiDotNet\\ApiDotNet\\wwwroot\\",
+      "BasePath": "_content/ApiDotNet",
+      "RelativePath": "file.rar",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\file.rar"
+    }
+  ]
 }

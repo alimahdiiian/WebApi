@@ -31,3 +31,5 @@ C:\Users\SCHAHRAD\source\repos\ApiDotNet\ApiDotNet\obj\Debug\net7.0\refint\ApiDo
 C:\Users\SCHAHRAD\source\repos\ApiDotNet\ApiDotNet\obj\Debug\net7.0\ApiDotNet.pdb
 C:\Users\SCHAHRAD\source\repos\ApiDotNet\ApiDotNet\obj\Debug\net7.0\ApiDotNet.genruntimeconfig.cache
 C:\Users\SCHAHRAD\source\repos\ApiDotNet\ApiDotNet\obj\Debug\net7.0\ref\ApiDotNet.dll
+C:\Users\SCHAHRAD\source\repos\ApiDotNet\ApiDotNet\bin\Debug\net7.0\WeatherForecast.cs
+C:\Users\SCHAHRAD\source\repos\ApiDotNet\ApiDotNet\bin\Debug\net7.0\ApiDotNet.staticwebassets.runtime.json

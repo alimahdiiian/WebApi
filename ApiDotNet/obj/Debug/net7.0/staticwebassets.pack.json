@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\SCHAHRAD\\source\\repos\\ApiDotNet\\ApiDotNet\\wwwroot\\file.rar",
+      "PackagePath": "staticwebassets\\file.rar"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.ApiDotNet.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.ApiDotNet.props",
+      "PackagePath": "build\\ApiDotNet.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.ApiDotNet.props",
+      "PackagePath": "buildMultiTargeting\\ApiDotNet.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.ApiDotNet.props",
+      "PackagePath": "buildTransitive\\ApiDotNet.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

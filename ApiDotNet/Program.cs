@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.StaticFiles;
+
 var builder = WebApplication.CreateBuilder(args);
 
 #region container
@@ -10,6 +12,10 @@ builder.Services.AddControllers(option =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+//create just one instance for all requests in project
+// addscoped => for any user one instance
+builder.Services.AddSingleton<FileExtensionContentTypeProvider>();
 #endregion
 
 var app = builder.Build();
