@@ -1,4 +1,4 @@
-﻿namespace ApiDotNet.Models
+﻿namespace ApiDotNet.Models.Entities
 {
     public class CityDTO
     {
@@ -22,6 +22,6 @@
         //navigation properties
         // city (1) ---------- PointsofInterest (1...*)
         public ICollection<PointsOfInterestDTO> PointsOfInterests
-        { get; set; }= new List<PointsOfInterestDTO>();
+        { get; set; } = new List<PointsOfInterestDTO>();
     }
 }

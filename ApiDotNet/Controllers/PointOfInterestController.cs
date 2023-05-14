@@ -1,5 +1,7 @@
-﻿using ApiDotNet.Models;
+﻿using ApiDotNet.Models.DTOs;
+using ApiDotNet.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
+using System.Reflection.Metadata.Ecma335;
 
 namespace ApiDotNet.Controllers
 {
@@ -30,7 +32,7 @@ namespace ApiDotNet.Controllers
         //pointOfInterestId is a fix name and url is :
         //https://localhost:7049/api/cities/1/pointsofinterest/pointOfInterestId?pointOfInterestId=1
 
-        [HttpGet("{pointOfInterestId}")]
+        [HttpGet("{pointOfInterestId}", Name ="GetPoinOfInterest")]
         public ActionResult<PointsOfInterestDTO>
       GetPointsOfInterest(int cityId, int pointOfInterestId)
         {
@@ -42,7 +44,7 @@ namespace ApiDotNet.Controllers
                 return NotFound();
             }
             var pointOfInterest = city.PointsOfInterests
-                .FirstOrDefault(p => p.Id == pointOfInterestId);
+                .FirstOrDefault(p => p.pointOfInterestId == pointOfInterestId);
 
             if (pointOfInterest == null)
             {
@@ -52,6 +54,55 @@ namespace ApiDotNet.Controllers
             return Ok(pointOfInterest);
 
         }
+
+
+        [HttpPost]
+        public ActionResult<PointsOfInterestDTO> CreatePointOfInterest
+            (int cityId, PointOfInterestForCreationDTO pointOfInterest)
+        {
+
+            // attribute that has assigned to property of 
+            // pointofinterestcreationDTO should be considerd
+            // otherwide Modelstate is not valid.
+            if (! ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+            var city = CitiesDataStore.citiesDataStoreInstance
+                .CitiesList.FirstOrDefault(c => c.Id == cityId);
+
+            if (city == null)
+            {
+                return NotFound();
+            }
+
+            var maxPointOfInterestId = CitiesDataStore
+                .citiesDataStoreInstance.CitiesList
+                .SelectMany(c => c.PointsOfInterests)
+                .Max(p => p.pointOfInterestId);
+
+            var createPointOfInterest = new PointsOfInterestDTO
+            {
+                pointOfInterestId = ++maxPointOfInterestId,
+                Description = pointOfInterest.Description,
+                Name = pointOfInterest.Name,
+                cityId = cityId,
+
+            };
+
+            city.PointsOfInterests.Add(createPointOfInterest);
+
+            return CreatedAtAction("GetPointOfInterest",
+       new
+       {
+            cityId,
+           createPointOfInterest.pointOfInterestId
+
+       },
+       createPointOfInterest
+   );
+        }
+
 
 
 

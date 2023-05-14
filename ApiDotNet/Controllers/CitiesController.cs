@@ -1,4 +1,4 @@
-﻿using ApiDotNet.Models;
+﻿using ApiDotNet.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Net.NetworkInformation;

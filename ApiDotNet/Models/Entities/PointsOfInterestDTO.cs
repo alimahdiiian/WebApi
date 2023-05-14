@@ -1,8 +1,9 @@
-﻿namespace ApiDotNet.Models
+﻿namespace ApiDotNet.Models.Entities
 {
+    //complex type class(PointOfInterestDTO)
     public class PointsOfInterestDTO
     {
-        public int Id { get; set; }
+        public int pointOfInterestId { get; set; }
         public string Name { get; set; }
         = string.Empty;
         public string? Description { get; set; }

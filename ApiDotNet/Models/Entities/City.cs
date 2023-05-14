@@ -1,4 +1,4 @@
-﻿namespace ApiDotNet.Models
+﻿namespace ApiDotNet.Models.Entities
 {
     public class City
     {

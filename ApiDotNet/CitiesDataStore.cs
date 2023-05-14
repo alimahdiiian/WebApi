@@ -1,4 +1,4 @@
-﻿using ApiDotNet.Models;
+﻿using ApiDotNet.Models.Entities;
 
 namespace ApiDotNet
 {
@@ -20,13 +20,13 @@ namespace ApiDotNet
                 {
                     new PointsOfInterestDTO()
                   {
-                      Id=1, Name="Baghe Shah",
+                      pointOfInterestId=1, Name="Baghe Shah",
                        Description="in down town"
                   },
 
                     new PointsOfInterestDTO()
                     {
-                       Id=2, Name="Topkhane",
+                       pointOfInterestId=2, Name="Topkhane",
                        Description="in south of city"
                     }
                 }
@@ -38,13 +38,13 @@ namespace ApiDotNet
                 {
                     new PointsOfInterestDTO()
                     {
-                        Id=3, Name="main church",
+                        pointOfInterestId=3, Name="main church",
                         Description="very beautiful place",
                     },
 
                     new PointsOfInterestDTO()
                     {
-                        Id=4, Name="main Dom",
+                        pointOfInterestId=4, Name="main Dom",
                         Description="very beautiful place",
                     },
                 } 
@@ -58,20 +58,19 @@ namespace ApiDotNet
                     {
                         new PointsOfInterestDTO()
                         {
-                            Id=5, Name="main Bridge",
+                            pointOfInterestId=5, Name="main Bridge",
                             Description="build in 1798",
+                             
                         },
                          new PointsOfInterestDTO()
                         {
-                             Id=6, Name="main cathedra",
+                             pointOfInterestId=6, Name="main cathedra",
                             Description="build in 1548",
                         },
                     }
 
                 },
 
-
-                new CityDTO(){Id=4},
             };
         }
     }
